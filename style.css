@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
+:root {
+  /* dark shades of primary color*/
+  --main-color-1: hsl(150, 86%, 17%);
+  --main-color-2: hsl(150, 77%, 27%);
+  --main-color-3: hsl(150, 72%, 37%);
+  --main-color-4: hsl(150, 63%, 48%);
+  /* primary/main color */
+  --main-color-5: #49e991;
+  /* lighter shades of primary color */
+  --main-color-6: hsl(150, 89%, 70%);
+  --main-color-7: hsl(150, 90%, 76%);
+  --main-color-8: hsl(150, 86%, 81%);
+  --main-color-9: hsl(150, 90%, 88%);
+  --main-color-10: hsl(150, 100%, 96%);
+  /* darkest grey - used for headings */
+  --shade-color-1: hsl(157, 61%, 16%);
+  --shade-color-2: hsl(159, 39%, 23%);
+  --shade-color-3: hsl(157, 34%, 30%);
+  --shade-color-4: hsl(157, 28%, 39%);
+  /* grey used for paragraphs */
+  --shade-color-5: hsl(157, 22%, 49%);
+  --shade-color-6: hsl(156, 23%, 60%);
+  --shade-color-7: hsl(156, 27%, 70%);
+  --shade-color-8: hsl(157, 31%, 80%);
+  --shade-color-9: hsl(157, 33%, 89%);
+  --shade-color-10: hsl(150, 36%, 96%);
+  --color-white: #fff;
+  --color-red-dark: hsl(360, 67%, 44%);
+  --color-red-light: hsl(360, 71%, 66%);
+  --color-green-dark: hsl(125, 67%, 44%);
+  --color-green-light: hsl(125, 71%, 66%);
+  --color-gold: #c59d5f;
+  --color-black: #222;
+  --ff-primary: 'Roboto', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background: var(--shade-color-10);
+  color: var(--shade-color-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  opacity: 1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img:not(.logo) {
+  width: 100%;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--shade-color-5);
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+/*  global classes */
+
+.btn {
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--color-black);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--color-black);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+
+.btn:hover {
+  color: var(--color-white);
+  background: var(--color-black);
+}
+.item1 {
+  grid-area: top;
+
+  height: 100px;
+  width: 400px;
+  border-radius: 150px 150px 0 0;
+  
+}
+.item2 {
+  grid-area: left;
+  border-radius: 15px 0 0 15px ;
+}
+.item3 {
+  grid-area: center;
+  
+  border-radius: 20% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.item4 {
+  grid-area: right;
+  border-radius: 0 15px 15px 0;
+}
+.item5 {
+  grid-area: bottom;
+  height: 100px;
+  width: 400px;
+  border-radius: 0 0 150px 150px;
+}
+.big {
+  
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #2196f3;
+  user-select: none;
+
+}
+.darken{
+  box-shadow: var(--dark-shadow);
+}
+
+.grid-container {
+  
+  border-radius: 30%;
+  width: 30vw;
+  max-width: 30vw;
+  height: 50vh;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+
+  grid-template-areas:
+    ' top top top'
+    'left center right'
+    'bottom bottom bottom';
+  gap: 10px;
+  
+  padding: 10px;
+  
+}
+
+.grid-container > div {
+  background-color: aquamarine;
+  text-align: center;
+  padding: 20px;
+
+  margin: 0;
+  font-size: 30px;
+}
+
+.grid-container > div:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width:500px){
+  .grid-container{
+    transform: scale(0.7);
+  }
+}
